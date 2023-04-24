@@ -1,28 +1,21 @@
-import path from 'path';
-import type { CollectionConfig } from 'payload/types';
+import { CollectionConfig } from 'payload/types';
 
 const Media: CollectionConfig = {
   slug: 'media',
   upload: {
-    staticDir: path.resolve(__dirname, '../../media'),
-    // Specify the size name that you'd like to use as admin thumbnail
-    adminThumbnail: 'thumbnail',
+    staticURL: '/media',
+    staticDir: 'media',
     imageSizes: [
       {
-        height: 400,
-        width: 400,
-        crop: 'center',
-        name: 'thumbnail',
-      },
-      {
-        width: 900,
-        height: 450,
-        crop: 'center',
-        name: 'sixteenByNineMedium',
+        name: 'card',
+        width: 768,
+        height: 1024,
+        position: 'centre',
       },
     ],
+    adminThumbnail: 'thumbnail',
+    mimeTypes: ['image/*'],
   },
-  fields: [],
 };
 
 export default Media;

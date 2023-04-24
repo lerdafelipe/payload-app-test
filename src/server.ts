@@ -12,8 +12,8 @@ app.get('/', (_, res) => {
 const start = async () => {
   // Initialize Payload
   await payload.init({
-    secret: process.env.PAYLOAD_SECRET,
-    mongoURL: process.env.MONGODB_URI,
+    secret: '9beab8f2caaecba52497eabf',
+    mongoURL: "mongodb://127.0.0.1/payload-app",
     express: app,
     onInit: async () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
@@ -22,7 +22,9 @@ const start = async () => {
 
   // Add your own express routes here
 
-  app.listen(3000);
+  app.listen(3000, async () => {
+    console.log('Express is listening on port 3000')
+  });
 }
 
 start();

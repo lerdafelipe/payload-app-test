@@ -11,10 +11,7 @@ const Users: CollectionConfig = {
   },
   fields: [
     // Email added by default
-    {
-      name: 'name',
-      type: 'text',
-    }
+    // Add more fields as needed
   ],
 };
 

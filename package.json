@@ -1,6 +1,6 @@
 {
   "name": "payload-app",
-  "description": "Payload project created from blog template",
+  "description": "Payload project created from blank template",
   "version": "1.0.0",
   "main": "dist/server.js",
   "license": "MIT",
